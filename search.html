@@ -1,0 +1,41 @@
+<input type="text" id="search">
+<div class="container">
+    <h1>one</h1>
+    <h1>two</h1>
+    <h1>three</h1>
+    <h1>four</h1>
+    <h1>five</h1>
+    <h1>six</h1>
+    <h1>seven</h1>
+    <h1>eight</h1>
+    <h1>nine</h1>
+    <h1>ten</h1>
+
+</div>
+<script>
+    let search=document.getElementById("search")
+    let container =document.querySelector(".container")
+    let h1List=container.querySelectorAll("h1")
+    console.log(h1List)
+
+    search.addEventListener("keyup",function(){
+        let enteredValue=event.target.value
+        console.log(enteredValue)
+        for(count=0;count<h1List.length;count=count+1){
+            if(h1List[count].textContent.indexOf(enteredValue)<0){
+                h1List[count].style.display="none"
+                console.log(h1List[count]+"and if condition  "+0 )
+            }
+            else{
+                h1List[count].style.display="block"
+                console.log(h1List[count]+"and else condition "+0 )
+
+
+            }
+        }
+
+
+    })
+
+
+</script>
